@@ -18,30 +18,30 @@ async function loginUser(credentials) {
 */
 
 const LoginPage = () => {
-/*
-}
+
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
 
-  const tokenFunction = useToken();
-  console.log(tokenFunction);
+  //const tokenFunction = useToken();
+  //console.log(tokenFunction);
 
   const handleSubmit = async e => {
       e.preventDefault();
-      const token = await loginUser({
-        username,
-        password
-      });
+      //const token = await loginUser({
+      //  username,
+     //   password
+     // });
 
       //console.log(token.token);
+      console.log("works");
 
       //tokenFunction.setToken(token.token);
     }
-*/
+
   return(
     <div className="login-wrapper square">
       <h1>Log In</h1>
-      {/*<form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <label>
           <p>Username</p>
           <input type="text" onChange={e => setUserName(e.target.value)} />
@@ -53,7 +53,7 @@ const LoginPage = () => {
         <div>
           <button type="submit" onSubmit={handleSubmit}>Submit</button>
         </div>
-      </form>*/}
+      </form>
     </div>
   );
 }
