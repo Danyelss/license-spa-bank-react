@@ -1,27 +1,16 @@
 .App {
   text-align: center;
+  align-items: bottom;
+  background-color: #262626;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+    color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#root {
+  height: 100%;
 }
 
 .App-link {
@@ -36,3 +25,125 @@
     transform: rotate(360deg);
   }
 }
+
+.square {
+    text-align: center;
+    align-items: center;
+
+    position: relative;
+    top: 100px;
+    vertical-align: center;
+    display: inline-block;
+    height: 350px;
+    width: 350px;
+    padding: 0px;
+    margin: 30px;
+    background-color: transparent;
+    -webkit-box-shadow: inset 2px 2px 20px 4px #000000;
+    box-shadow: inset 2px 2px 20px 4px #000000;
+}
+
+.triangle-down {
+    text-align: center;
+    align-items: center;
+
+    position: relative;
+    top: 0px;
+    vertical-align: bottom;
+    display: inline-block;
+
+	width: 0;
+	height: 0;
+	border-left: 175px solid transparent;
+	border-right: 175px solid transparent;
+	border-top: 350px solid black;
+	padding: 0px;
+    margin: 0px;
+    background-color: transparent;
+    //-webkit-box-shadow: 2px 2px 20px 4px #000000;
+    //filter: drop-shadow(30px 10px 4px #4444dd);
+    filter: drop-shadow( 0px 0px 20px #000000);
+}
+
+.circle {
+    text-align: center;
+    align-items: center;
+
+    position: relative;
+    top: 100px;
+    vertical-align: bottom;
+    display: inline-block;
+    height: 350px;
+    width: 350px;
+    background-color: #555;
+    border-radius: 50%;
+    padding: 0px;
+    margin: 30px;
+    background-color: black;
+      //-webkit-box-shadow: 2px 2px 20px 4px #000000;
+      //filter: drop-shadow(30px 10px 4px #4444dd);
+    //filter: drop-shadow( 0px 0px 20px #000000);
+    }
+
+.deposit {
+text-align: center;
+    align-items: center;
+
+    position: relative;
+    top: 100px;
+    vertical-align: bottom;
+    display: inline-block;
+    height: 350px;
+    width: 350px;
+    padding: 0px;
+    margin: 30px;
+    background-color: transparent;
+}
+
+.withdraw {
+text-align: center;
+    align-items: center;
+
+    position: relative;
+    top: 100px;
+    vertical-align: bottom;
+    display: inline-block;
+    height: 350px;
+    width: 350px;
+
+    padding: 0px;
+    margin: 30px;
+    background-color: transparent;
+}
+
+.shadow {
+  -webkit-filter: drop-shadow( 3px 3px 5px #000000);
+  filter: drop-shadow( 3px 3px 5px #000000);
+}
+
+.slide-bottom {
+	-webkit-animation: slide-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s reverse both;
+	        animation: slide-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s reverse both;
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+
