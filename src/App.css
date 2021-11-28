@@ -60,8 +60,6 @@ h1 {
 	padding: 0px;
     margin: 0px;
     background-color: transparent;
-    //-webkit-box-shadow: 2px 2px 20px 4px #000000;
-    //filter: drop-shadow(30px 10px 4px #4444dd);
     filter: drop-shadow( 0px 0px 20px #000000);
 }
 
@@ -80,9 +78,6 @@ h1 {
     padding: 0px;
     margin: 30px;
     background-color: black;
-      //-webkit-box-shadow: 2px 2px 20px 4px #000000;
-      //filter: drop-shadow(30px 10px 4px #4444dd);
-    //filter: drop-shadow( 0px 0px 20px #000000);
     }
 
 .deposit {

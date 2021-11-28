@@ -1,13 +1,5 @@
 import axios from 'axios';
-import React from 'react';
-
-const api = axios.create({
-    baseURL: 'http://localhost:8081/api/'
-})
-
-const params = new URLSearchParams()
-params.append('username', 'beni');
-params.append('password', '0000');
+import {saveAccessToken, saveRefreshToken} from '../token/Tokens';
 
 const config = {
   headers: {
@@ -17,17 +9,25 @@ const config = {
 
 const url = 'https://license-cors-proxy.herokuapp.com/https://license-crypto-bank.herokuapp.com/api/login';
 
-    const login = async () => {
-        axios.post(url, params, config)
-            .then((result) => {
-                console.log(result);
-            })
-            .catch((err) => {
-              // Do somthing
-            })
-    };
+const Login = async (username, password) => {
+  //const tokenUtil = TokenUtility();
 
-    export default login;
+  const params = new URLSearchParams()
+  params.append('username', username);
+  params.append('password', password);
+
+  axios.post(url, params, config)
+    .then((result) => {
+      //console.log(typeof result.data.acces_token);
+      saveAccessToken(result.data.acces_token);
+      saveRefreshToken(result.data.refresh_token);
+    })
+    .catch((err) => {
+      // Do somthing
+    })
+};
+
+export default Login;
 
 
 /*

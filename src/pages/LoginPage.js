@@ -1,46 +1,39 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-//import login from '../requests/PostAxios';
-//import useToken from '../token/Tokens';
+import Login from '../requests/PostAxios';
 
-/*
-async function loginUser(credentials) {
+import { existsAccessToken, getRefreshToken } from '../token/Tokens';
 
- return fetch('http://localhost:8082/login', {
-   method: 'POST',
-   headers: {
-     'Content-Type': 'application/json'
-   },
-   body: JSON.stringify(credentials)
- })
-   .then(data => data.json())
+
+async function loginUser(username, password) {
+  Login(username, password);
 }
-*/
 
 const LoginPage = () => {
+
+  const isActive = false;
 
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
 
-  //const tokenFunction = useToken();
-  //console.log(tokenFunction);
-
   const handleSubmit = async e => {
-      e.preventDefault();
-      //const token = await loginUser({
-      //  username,
-     //   password
-     // });
+    e.preventDefault();
 
-      //console.log(token.token);
-      console.log("works");
+    await loginUser(
+      username,
+      password
+    );
+  }
 
-      //tokenFunction.setToken(token.token);
-    }
+  const mue = async e => {
+    e.preventDefault();
 
-  return(
-    <div className="login-wrapper square">
-      <h1>Log In</h1>
+    console.log("voua");
+  }
+
+  return (
+    <div className="login-wrapper circle">
       <form onSubmit={handleSubmit}>
         <label>
           <p>Username</p>
@@ -51,7 +44,9 @@ const LoginPage = () => {
           <input type="password" onChange={e => setPassword(e.target.value)} />
         </label>
         <div>
-          <button type="submit" onSubmit={handleSubmit}>Submit</button>
+          <Link to="/home">
+            <button type="submit" onSubmit={handleSubmit}>Log In</button>
+          </Link>
         </div>
       </form>
     </div>
