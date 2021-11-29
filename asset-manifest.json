@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/license-spa-bank-react/static/css/main.10431adb.chunk.css",
+    "main.js": "/license-spa-bank-react/static/js/main.b5b1ca91.chunk.js",
+    "main.js.map": "/license-spa-bank-react/static/js/main.b5b1ca91.chunk.js.map",
+    "runtime-main.js": "/license-spa-bank-react/static/js/runtime-main.c147f6b7.js",
+    "runtime-main.js.map": "/license-spa-bank-react/static/js/runtime-main.c147f6b7.js.map",
+    "static/js/2.0c1bb668.chunk.js": "/license-spa-bank-react/static/js/2.0c1bb668.chunk.js",
+    "static/js/2.0c1bb668.chunk.js.map": "/license-spa-bank-react/static/js/2.0c1bb668.chunk.js.map",
+    "static/js/3.66d756a9.chunk.js": "/license-spa-bank-react/static/js/3.66d756a9.chunk.js",
+    "static/js/3.66d756a9.chunk.js.map": "/license-spa-bank-react/static/js/3.66d756a9.chunk.js.map",
+    "index.html": "/license-spa-bank-react/index.html",
+    "static/css/main.10431adb.chunk.css.map": "/license-spa-bank-react/static/css/main.10431adb.chunk.css.map",
+    "static/js/2.0c1bb668.chunk.js.LICENSE.txt": "/license-spa-bank-react/static/js/2.0c1bb668.chunk.js.LICENSE.txt",
+    "static/media/deposit.ea60ee89.svg": "/license-spa-bank-react/static/media/deposit.ea60ee89.svg",
+    "static/media/undraw_Taken.d7148d0c.svg": "/license-spa-bank-react/static/media/undraw_Taken.d7148d0c.svg",
+    "static/media/vault.c2838834.svg": "/license-spa-bank-react/static/media/vault.c2838834.svg",
+    "static/media/withdraw.abb306b3.svg": "/license-spa-bank-react/static/media/withdraw.abb306b3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c147f6b7.js",
+    "static/js/2.0c1bb668.chunk.js",
+    "static/css/main.10431adb.chunk.css",
+    "static/js/main.b5b1ca91.chunk.js"
+  ]
+}
