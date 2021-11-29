@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 
 import Login from '../requests/PostAxios';
 
@@ -13,6 +14,7 @@ async function loginUser(username, password) {
 const LoginPage = () => {
 
   const isActive = false;
+  const navigate = useNavigate();
 
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
@@ -24,6 +26,9 @@ const LoginPage = () => {
       username,
       password
     );
+
+    navigate('/home');
+
   }
 
   const mue = async e => {
@@ -44,9 +49,7 @@ const LoginPage = () => {
           <input type="password" onChange={e => setPassword(e.target.value)} />
         </label>
         <div>
-          <Link to="/home">
-            <button type="submit" onSubmit={handleSubmit}>Log In</button>
-          </Link>
+          <button type="submit" onSubmit={handleSubmit}>Log In</button>
         </div>
       </form>
     </div>

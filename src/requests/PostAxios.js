@@ -18,12 +18,14 @@ const Login = async (username, password) => {
 
   axios.post(url, params, config)
     .then((result) => {
+      console.log(result);
       //console.log(typeof result.data.acces_token);
       saveAccessToken(result.data.acces_token);
       saveRefreshToken(result.data.refresh_token);
     })
     .catch((err) => {
-      // Do somthing
+      if( err.response.status == 403 )
+        console.log("Forbidden");
     })
 };
 
