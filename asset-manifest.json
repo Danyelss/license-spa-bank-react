@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/license-spa-bank-react/static/css/main.10431adb.chunk.css",
-    "main.js": "/license-spa-bank-react/static/js/main.f006c285.chunk.js",
-    "main.js.map": "/license-spa-bank-react/static/js/main.f006c285.chunk.js.map",
+    "main.js": "/license-spa-bank-react/static/js/main.209c02d0.chunk.js",
+    "main.js.map": "/license-spa-bank-react/static/js/main.209c02d0.chunk.js.map",
     "runtime-main.js": "/license-spa-bank-react/static/js/runtime-main.c147f6b7.js",
     "runtime-main.js.map": "/license-spa-bank-react/static/js/runtime-main.c147f6b7.js.map",
     "static/js/2.0c1bb668.chunk.js": "/license-spa-bank-react/static/js/2.0c1bb668.chunk.js",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.c147f6b7.js",
     "static/js/2.0c1bb668.chunk.js",
     "static/css/main.10431adb.chunk.css",
-    "static/js/main.f006c285.chunk.js"
+    "static/js/main.209c02d0.chunk.js"
   ]
 }
