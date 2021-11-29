@@ -1,6 +1,6 @@
 {
   "name": "license-spa-bank-react",
-  "homepage": "https://danyelss.github.io/license-spa-bank-react",
+  "homepage": "https://Danyelss.github.io/license-spa-bank-react/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,7 +18,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
