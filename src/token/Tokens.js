@@ -5,14 +5,6 @@ export const getAccessToken = () => {
   return userToken;
 }
 
-export const existsAccessToken = () => {
-  if (localStorage.getItem("accessToken") === null) {
-    return false;
-  }
-
-  return true;
-}
-
 export const getRefreshToken = () => {
   const tokenString = localStorage.getItem('refreshToken');
   const userToken = tokenString;
