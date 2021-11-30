@@ -48,6 +48,7 @@ const LoginPage = () => {
           <button className="submitButton"type="submit" onSubmit={handleSubmit}>Log In</button>
         </div>
       </form>
+      <p>v.1.1</p>
     </div>
   );
 }

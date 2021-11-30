@@ -19,10 +19,10 @@ function App() {
     <div className="App">
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route exact path="/" element={<LoginPage />} />
-          <Route exact path="/login" element={<LoginPage />} />
-          <Route exact path="/404" element={<ErrorPage />} />
-          {/*<Route path="*" element={<Navigate replace to="/404" />} />*/}
+          <Route path="/" element={<LoginPage />} />
+          {/*<Route exact path="/login" element={<LoginPage />} />*/}
+          <Route path="/404" element={<ErrorPage />} />
+          <Route path="*" element={<Navigate replace to="/404" />} />
           <Route
             path="/home"
             element={
@@ -40,7 +40,9 @@ function App() {
 function PrivateRoute({ children }) {
   const auth = getAccessToken();
 
-  return auth ? children : <Navigate to="/login" />;
+  console.log("Private route called having acces token: " + auth);
+
+  return auth ? children : <Navigate to="/" />;
 }
 
 export default App;
