@@ -2,12 +2,9 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { saveAccessToken, saveRefreshToken } from '../token/Tokens';
-
-
-
 import Login from '../requests/PostAxios';
 
-//import { existsAccessToken, getRefreshToken } from '../token/Tokens';
+//import { getRefreshToken } from '../token/Tokens';
 
 const LoginPage = () => {
 

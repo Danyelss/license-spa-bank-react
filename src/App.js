@@ -1,11 +1,15 @@
 import './App.css';
-import { getAccessToken, 
+import {
+  getAccessToken,
   //getRefreshToken
 } from './token/Tokens';
 
 import LoginPage from './pages/LoginPage';
 import ErrorPage from './pages/ErrorPage';
 import HomePage from './pages/HomePage';
+import VaultPage from './pages/VaultPage';
+import DepositPage from './pages/DepositPage';
+import WithdrawPage from './pages/WithdrawPage';
 
 import {
   Routes,
@@ -31,6 +35,30 @@ function App() {
               </PrivateRoute>
             }
           />
+          <Route
+            path="/vault"
+            element={
+              <PrivateRoute>
+                <VaultPage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/deposit"
+            element={
+              <PrivateRoute>
+                <DepositPage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/withdraw"
+            element={
+              <PrivateRoute>
+                <WithdrawPage />
+              </PrivateRoute>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </div>
@@ -39,8 +67,6 @@ function App() {
 
 function PrivateRoute({ children }) {
   const auth = getAccessToken();
-
-  console.log("Private route called having acces token: " + auth);
 
   return auth ? children : <Navigate to="/" />;
 }

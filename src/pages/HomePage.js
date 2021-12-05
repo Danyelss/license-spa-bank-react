@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ReactComponent as VaultIcon } from '../svgs/vault.svg';
 import { ReactComponent as EthDepositIcon } from '../svgs/deposit.svg';
 import { ReactComponent as WithdrawIcon } from '../svgs/withdraw.svg';
@@ -9,12 +10,17 @@ const HomePage = () => {
     return (
         <div>
 
-            <Vault />
+            <Link to='/vault'>
+                <Vault />
+            </Link>
 
-            <Deposit />
+            <Link to='/deposit'>
+                <Deposit />
+            </Link>
 
-            <Withdraw />
-
+            <Link to='/withdraw'>
+                <Withdraw />
+            </Link>
         </div>
     );
 };
