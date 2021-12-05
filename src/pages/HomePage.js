@@ -5,11 +5,9 @@ import { ReactComponent as EthDepositIcon } from '../svgs/deposit.svg';
 import { ReactComponent as WithdrawIcon } from '../svgs/withdraw.svg';
 import '../App.css';
 
-
 const HomePage = () => {
     return (
         <div>
-
             <Link to='/vault'>
                 <Vault />
             </Link>
@@ -30,7 +28,6 @@ function Vault() {
         <div className="square slide-bottom">
             <VaultIcon className="shadow" />
         </div>
-
     );
 }
 
@@ -39,7 +36,6 @@ function Deposit() {
         <div className="shadow deposit slide-bottom">
             <EthDepositIcon className="shadow" />
         </div>
-
     );
 }
 
@@ -48,7 +44,6 @@ function Withdraw() {
         <div className="withdraw slide-bottom">
             <WithdrawIcon className="shadow" />
         </div>
-
     );
 }
 
