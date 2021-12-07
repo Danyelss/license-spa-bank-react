@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../layouts/Header';
-import { ReactComponent as ReloadIndicator } from '../svgs/reloadIndicator.svg';
+//import { ReactComponent as ReloadIndicator } from '../svgs/reloadIndicator.svg';
 
 
 const DepositPage = () => {
