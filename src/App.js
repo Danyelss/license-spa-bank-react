@@ -20,7 +20,7 @@ import {
 
 function App() {
   return (
-    <div className="App">
+    <div className="App porscheLogin">
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path="/" element={<LoginPage />} />

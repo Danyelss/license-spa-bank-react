@@ -4,6 +4,7 @@
     align-items: bottom;
     background-color: #262626;
     height: 100vh;
+    width: 100vw;
 }
 
 body {
@@ -15,6 +16,18 @@ body {
 
 h1 {
     color: white;
+    font-size: 150%;
+    
+    font-family: 'Helvetica', 'Arial', sans-serif;
+
+}
+
+.balanceText {
+    color: white;
+    font-size: 30pt;
+    text-align: right;
+    
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
 .whiteText {
@@ -192,7 +205,7 @@ h1 {
 
 }
 
-.homeButton{
+.homeButton {
     height: 64px;
     width: 208px;
     padding-top: 10px;
@@ -201,7 +214,7 @@ h1 {
     background-color: transparent;
 }
 
-.reloadIndicator{
+.reloadIndicator {
     height: 64px;
     width: 64px;
     position: relative;
@@ -210,33 +223,78 @@ h1 {
 }
 
 .rotate-center {
-	-webkit-animation: rotate-center 10s linear infinite both;
-	        animation: rotate-center 10s linear infinite both;
+    -webkit-animation: rotate-center 10s linear infinite both;
+    animation: rotate-center 10s linear infinite both;
 }
 
 @-webkit-keyframes rotate-center {
     0% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
     }
-    100% {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-    }
-  }
-  @keyframes rotate-center {
-    0% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-    }
-  }
-  
 
-  .justifyEnd {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+.justifyEnd {
     display: flex;
     justify-content: start;
-  }
+}
+
+.porscheLogin {
+    height: 100vw;
+    width: 100vw;
+    background-image: url("./assets/porscheLogin.jpg");
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.rectangleBalance {
+    text-align: center;
+    align-items: center;
+    position: relative;
+    vertical-align: center;
+    display: inline-block;
+    height: 100px;
+    width: 350px;
+    padding: 0px;
+    margin: 30px;
+    background-color: transparent;
+    -webkit-box-shadow: inset 2px 2px 20px 4px #7d7d7d;
+    box-shadow: inset 2px 2px 20px 4px #7d7d7d;
+}
+
+.vaultTextAlignment {
+    text-align: right;
+    align-items: right;
+    position: relative;
+    vertical-align: bottom;
+    display: inline-block;
+    background-color: transparent;
+
+    margin: auto;
+   
+    padding: 35px;
+}

@@ -30,7 +30,7 @@ const LoginPage = () => {
   }
 
   return (
-    <div className="circle ">
+    <div className="circle deposit slide-bottom">
       <form className="center" onSubmit={handleSubmit}>
         <label>
           <p className="whiteText">Username</p>
