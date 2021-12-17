@@ -46,10 +46,8 @@ const DepositPage = () => {
     }
 
     const handleCopyClick = () => {
-        // Asynchronously call copyTextToClipboard
         copyTextToClipboard(adress)
             .then(() => {
-                // If successful, update the isCopied state value
                 setIsCopied(true);
                 setTimeout(() => {
                     setIsCopied(false);
@@ -64,11 +62,13 @@ const DepositPage = () => {
         <div>
             <Header />
 
-            <div className="rectangleBalance">
+            <h1>Deposit Ethereum</h1>
+
+            <div className="rectangleDeposit">
                 <div className="vaultTextAlignment">
-                    <input type="text" value={adress} readOnly />
-                    {/* Bind our handler function to the onClick button property */}
-                    <button onClick={handleCopyClick}>
+                    <input className="depositCopyField" type="text" value={adress} readOnly />
+
+                    <button className="depositCopyButton" onClick={handleCopyClick}>
                         <span>{isCopied ? 'Copied!' : 'Copy'}</span>
                     </button>
                 </div>
