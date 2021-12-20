@@ -214,6 +214,29 @@ h1 {
     background-color: transparent;
 }
 
+.logoutButton {
+    height: 64px;
+    width: 100px;
+    padding-top: 10px;
+    padding-left: 10px;
+    position: relative;
+    background-color: transparent;
+}
+
+.card{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   }
+
+.logoutButton {
+    padding: 0;
+    border: none;
+    background: none;
+    background-color: transparent;
+    cursor:pointer;
+}
+
 .reloadIndicator {
     height: 64px;
     width: 64px;
@@ -252,9 +275,14 @@ h1 {
 }
 
 
-.justifyEnd {
-    display: flex;
+.justifyStart {
+    display: inline-flex;
     justify-content: start;
+}
+
+.justifyEnd {
+    display: inline-flex;
+    justify-content: end;
 }
 
 .porscheLogin {

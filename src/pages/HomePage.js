@@ -4,10 +4,14 @@ import { ReactComponent as VaultIcon } from '../svgs/vault.svg';
 import { ReactComponent as EthDepositIcon } from '../svgs/deposit.svg';
 import { ReactComponent as WithdrawIcon } from '../svgs/withdraw.svg';
 import '../App.css';
+import Header from '../layouts/Header';
+
 
 const HomePage = () => {
     return (
         <div>
+            <Header />
+
             <Link to='/vault'>
                 <Vault />
             </Link>
