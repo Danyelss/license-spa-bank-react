@@ -68,6 +68,22 @@ h1 {
     box-shadow: inset 2px 2px 20px 4px #000000;
 }
 
+.whiteSquare {
+    vertical-align: center;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    display: inline-block;
+    height: 350px;
+    width: 700px;
+    padding: 0px;
+    margin: 0px;
+    background-color: transparent;
+    -webkit-box-shadow: inset 2px 2px 20px 4px white;
+    box-shadow: inset 2px 2px 20px 4px white;
+}
+
 .triangle-down {
     text-align: center;
     align-items: center;
@@ -223,18 +239,18 @@ h1 {
     background-color: transparent;
 }
 
-.card{ 
+.card {
     display: flex;
     align-items: center;
     justify-content: space-between;
-   }
+}
 
 .logoutButton {
     padding: 0;
     border: none;
     background: none;
     background-color: transparent;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .reloadIndicator {
