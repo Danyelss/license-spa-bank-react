@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { getAccessToken } from '../token/Tokens';
 
-const Transaction = async (option, adress, ammount) => {
+const Transaction = async (option, address, ammount) => {
     let url = 'https://license-cors-proxy.herokuapp.com/https://license-crypto-bank.herokuapp.com/api/';
     const params = new URLSearchParams();
 
@@ -14,7 +14,7 @@ const Transaction = async (option, adress, ammount) => {
             url = url + 'withdraw';
 
             // withdraw logic + requests
-            params.append('adress', adress);
+            params.append('address', address);
             params.append('ammount', ammount);
 
             console.log(url);

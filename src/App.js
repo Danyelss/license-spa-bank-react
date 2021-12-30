@@ -10,6 +10,7 @@ import HomePage from './pages/HomePage';
 import VaultPage from './pages/VaultPage';
 import DepositPage from './pages/DepositPage';
 import WithdrawPage from './pages/WithdrawPage';
+import RegisterPage from './pages/RegisterPage';
 
 import {
   Routes,
@@ -59,10 +60,24 @@ function App() {
               </PrivateRoute>
             }
           />
+          <Route
+            path="/register"
+            element={
+              <PublicRoute>
+                <RegisterPage />
+              </PublicRoute>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </div>
   );
+}
+
+function PublicRoute({ children }) {
+  const auth = getAccessToken();
+
+  return auth ? <Navigate to="/" /> : children ;
 }
 
 function PrivateRoute({ children }) {

@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import Header from '../layouts/Header';
-import { ReactComponent as ReloadIndicator } from '../svgs/reloadIndicator.svg';
 import Transaction from '../requests/PostTransaction';
 
 const DepositPage = () => {
@@ -18,22 +17,9 @@ const DepositPage = () => {
     }
 
     useLayoutEffect(() => {
-        console.log('started');          // sometimes called more than 2 times on a row
+        console.log('started');
         clicked();
     }, []);
-
-    /*
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            (async () => {
-                console.log('does it work?');          // sometimes called more than 2 times on a row
-                clicked();
-            })();
-        }, 1000 * 10);
-
-        return () => clearInterval(intervalId);
-    }, []);
-    */
 
     const [isCopied, setIsCopied] = useState(false);
 

@@ -6,7 +6,6 @@ import { ReactComponent as WithdrawIcon } from '../svgs/withdraw.svg';
 import '../App.css';
 import Header from '../layouts/Header';
 
-
 const HomePage = () => {
     return (
         <div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { Link } from 'react-router-dom';
 import { saveAccessToken, saveRefreshToken } from '../token/Tokens';
 import Login from '../requests/PostLogin';
 
@@ -30,22 +30,33 @@ const LoginPage = () => {
   }
 
   return (
-    <div className="circle deposit slide-bottom">
-      <form className="center" onSubmit={handleSubmit}>
-        <label>
-          <p className="whiteText">Username</p>
-          <input className="inputArea" type="text" onChange={e => setUserName(e.target.value)} />
-        </label>
-        <label>
-          <p className="whiteText">Password</p>
-          <input className="inputArea" type="password" onChange={e => setPassword(e.target.value)} />
-        </label>
-        <div>
-          <p></p>
-          <button className="submitButton"type="submit" onSubmit={handleSubmit}>Log In</button>
+    <div>
+      <header>
+      <nav>
+        <div className="register">
+          <Link to="/register">
+            <button className="submitButton">Register</button>
+          </Link>
         </div>
-      </form>
-      <p>v.1.2</p>
+      </nav>
+    </header>
+      <div className="circle deposit slide-bottom">
+        <form className="center" onSubmit={handleSubmit}>
+          <label>
+            <p className="whiteText">Username</p>
+            <input className="inputArea" type="text" onChange={e => setUserName(e.target.value)} />
+          </label>
+          <label>
+            <p className="whiteText">Password</p>
+            <input className="inputArea" type="password" onChange={e => setPassword(e.target.value)} />
+          </label>
+          <div>
+            <p></p>
+            <button className="submitButton" type="submit" onSubmit={handleSubmit}>Log In</button>
+          </div>
+        </form>
+        <p>v.1.2</p>
+      </div>
     </div>
   );
 }

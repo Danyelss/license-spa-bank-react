@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import Header from '../layouts/Header';
-//import { ReactComponent as ReloadIndicator } from '../svgs/reloadIndicator.svg';
-
+import Transaction from '../requests/PostTransaction';
 
 const WithdrawPage = () => {
-    const navigate = useNavigate();
 
     const [address, setAddress] = useState();
     const [ammount, setAmmount] = useState();
@@ -13,18 +10,19 @@ const WithdrawPage = () => {
     const handleSubmit = async e => {
         e.preventDefault();
 
-        //await Login(username, password)
-        // .then((result) => {
-        // saveAccessToken(result.data.acces_token);
-        // saveRefreshToken(result.data.refresh_token);
-        // navigate('/home');
-        //  })
-        // .catch(error => {
-        //    if (error.response.status === 403)
-        //      console.log("Forbidden");
-        //  });
-    }
+        console.log(address);
 
+        Transaction('withdraw', address, ammount)
+            .then((result) => {
+                console.log(result.data.response);
+
+            })
+            .catch(error => {
+                if (error.response.status === 403)
+                    console.log("Forbidden");
+            }
+            );
+    }
 
     return (
         <div>
