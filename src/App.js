@@ -77,7 +77,7 @@ function App() {
 function PublicRoute({ children }) {
   const auth = getAccessToken();
 
-  return auth ? <Navigate to="/" /> : children ;
+  return auth ? <Navigate to="/home" /> : children ;
 }
 
 function PrivateRoute({ children }) {
