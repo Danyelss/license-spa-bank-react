@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from '../layouts/Header';
 import Transaction from '../requests/PostTransaction';
 
+
 const WithdrawPage = () => {
 
     const [address, setAddress] = useState();
@@ -9,8 +10,6 @@ const WithdrawPage = () => {
 
     const handleSubmit = async e => {
         e.preventDefault();
-
-        console.log(address);
 
         Transaction('withdraw', address, ammount)
             .then((result) => {

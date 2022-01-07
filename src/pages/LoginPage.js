@@ -55,14 +55,13 @@ const LoginPage = () => {
             <button className="submitButton" type="submit" onSubmit={handleSubmit}>Log In</button>
           </div>
         </form>
-        <p>v.1.2</p>
+        <p>v.1.3</p>
       </div>
     </div>
   );
 }
 
 export default LoginPage;
-
 
 /*
 
