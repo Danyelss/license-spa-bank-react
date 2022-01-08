@@ -19,7 +19,7 @@ const RegisterPage = () => {
     const handleSubmit = async e => {
         e.preventDefault();
 
-        let json = {
+        let user = {
             "username": username,
             "password": password,
             "first_name": firstName,
@@ -30,27 +30,24 @@ const RegisterPage = () => {
             ]
         };
 
-        console.log("wtf ba");
+        console.log(JSON.parse(JSON.stringify(user)));
 
-        console.log(JSON.parse(JSON.stringify(json)));
-
-        await Register(JSON.parse(JSON.stringify(json)))
+        await Register(JSON.stringify(user))
             .then((result) => {
-                navigate('/home');
+                console.log(result);
+                //navigate('/home');
             })
             .catch(error => {
                 if (error.response.status === 403)
                     console.log("Forbidden");
             });
-
     }
-
 
     return (
         <div>
             <Link to="/"><button className="submitButton">Back</button></Link>
 
-            <form className="center" >
+            <form className="center" onSubmit={handleSubmit}>
                 <label>
                     <p className="whiteText">Username</p>
                     <input className="depositCopyField" type="text" onChange={e => setUsername(e.target.value)} />
