@@ -30,8 +30,6 @@ const RegisterPage = () => {
             ]
         };
 
-        console.log(JSON.parse(JSON.stringify(user)));
-
         await Register(JSON.stringify(user))
             .then((result) => {
                 console.log(result);

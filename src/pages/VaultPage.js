@@ -46,13 +46,18 @@ const VaultPage = () => {
           <div className="balanceText">{balanceETH}</div>
         </div>
       </div>
+    </div>
+  );
+};
+
+/*
+
+</div>
       <div className="rectangleBalance">
       <div className="vaultTextAlignment">
           <div className="balanceText">{balanceDLR}</div>
         </div>
-      </div>
-    </div>
-  );
-};
+
+*/
 
 export default VaultPage;
