@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
-import { saveAccessToken, saveRefreshToken } from '../token/Tokens';
-import Login from '../requests/PostLogin';
+import { saveAccessToken, saveRefreshToken } from '../data/Tokens';
+import Login from '../api/PostLogin';
 
 //import { getRefreshToken } from '../token/Tokens';
 

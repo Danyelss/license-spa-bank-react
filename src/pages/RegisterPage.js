@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
-import Register from '../requests/PostRegister';
+import Register from '../api/PostRegister';
 
 
 const RegisterPage = () => {

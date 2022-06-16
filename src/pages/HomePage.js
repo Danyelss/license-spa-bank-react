@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ReactComponent as VaultIcon } from '../svgs/vault.svg';
-import { ReactComponent as EthDepositIcon } from '../svgs/deposit.svg';
-import { ReactComponent as WithdrawIcon } from '../svgs/withdraw.svg';
+import { ReactComponent as VaultIcon } from '../assets/svgs/vault.svg';
+import { ReactComponent as EthDepositIcon } from '../assets/svgs/deposit.svg';
+import { ReactComponent as WithdrawIcon } from '../assets/svgs/withdraw.svg';
 import '../App.css';
 import Header from '../layouts/Header';
 

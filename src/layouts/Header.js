@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ReactComponent as HomeIcon } from '../svgs/HomeIcon.svg';
-import { ReactComponent as LogoutButton } from '../svgs/logoutButton.svg';
+import { ReactComponent as HomeIcon } from '../assets/svgs/HomeIcon.svg';
+import { ReactComponent as LogoutButton } from '../assets/svgs/logoutButton.svg';
 
 const Header = () => {
   return (

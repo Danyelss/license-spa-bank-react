@@ -2,7 +2,7 @@ import './App.css';
 import {
   getAccessToken,
   //getRefreshToken
-} from './token/Tokens';
+} from './data/Tokens';
 
 import LoginPage from './pages/LoginPage';
 import ErrorPage from './pages/ErrorPage';

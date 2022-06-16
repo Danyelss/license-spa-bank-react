@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { default as TakenSVG } from '../svgs/undraw_Taken.svg';
+import { default as TakenSVG } from '../assets/svgs/undraw_Taken.svg';
 
 const ErrorPage = () => {
   return (

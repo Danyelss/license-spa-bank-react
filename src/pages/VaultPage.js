@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useLayoutEffect } from "react";
 import Header from '../layouts/Header';
-import { ReactComponent as ReloadIndicator } from '../svgs/reloadIndicator.svg';
-import Transaction from '../requests/PostTransaction';
+import { ReactComponent as ReloadIndicator } from '../assets/svgs/reloadIndicator.svg';
+import Transaction from '../api/PostTransaction';
 
 const VaultPage = () => {
   const [balanceETH, setBalanceETH] = useState();

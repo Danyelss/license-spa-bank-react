@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from '../layouts/Header';
-import Transaction from '../requests/PostTransaction';
+import Transaction from '../api/PostTransaction';
 
 
 const WithdrawPage = () => {

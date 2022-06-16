@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { getAccessToken } from '../token/Tokens';
+import { getAccessToken } from '../data/Tokens';
 
 const Transaction = async (option, address, ammount) => {
     let url = 'https://license-cors-proxy.herokuapp.com/https://license-crypto-bank.herokuapp.com/api/';
