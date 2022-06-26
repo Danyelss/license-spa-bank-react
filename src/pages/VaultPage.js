@@ -5,13 +5,11 @@ import Transaction from '../api/PostTransaction';
 
 const VaultPage = () => {
   const [balanceETH, setBalanceETH] = useState();
-  const [balanceDLR, setBalanceDLR] = useState();
 
-  const clicked = () => {
+  const aquireData = () => {
     Transaction('balance', '', '')
       .then((result) => {
         setBalanceETH(result.data.eth);
-        setBalanceDLR(result.data.fiat);
       })
       .catch(error => {
         if (error.response.status === 403)
@@ -20,15 +18,13 @@ const VaultPage = () => {
   }
 
   useLayoutEffect(() => {
-    console.log('started');          // sometimes called more than 2 times on a row
-    clicked();
+    aquireData();
   }, []);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
       (async () => {
-        console.log('does it work?');          // sometimes called more than 2 times on a row
-        clicked();
+        aquireData();
       })();
     }, 1000 * 10);
 

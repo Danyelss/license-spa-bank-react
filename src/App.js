@@ -25,7 +25,6 @@ function App() {
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path="/" element={<LoginPage />} />
-          {/*<Route exact path="/login" element={<LoginPage />} />*/}
           <Route path="/404" element={<ErrorPage />} />
           <Route path="*" element={<Navigate replace to="/404" />} />
           <Route

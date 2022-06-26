@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import Register from '../api/PostRegister';
 
-
 const RegisterPage = () => {
     const navigate = useNavigate();
 
@@ -19,6 +18,41 @@ const RegisterPage = () => {
     const handleSubmit = async e => {
         e.preventDefault();
 
+        let message = '';
+
+        if (username != null) {
+            if (username.length < 4) {
+                message += "Username should be longer than 4 characters\n";
+            }
+        } else message += "Username field should not be empty\n";
+
+        if (password != null) {
+            if (password.length < 4)
+                message += "Password should be longer than 4 characters\n";
+        } else {
+            message += "Password field should not be empty\n";
+        }
+
+        if (email != null) {
+            if (email.length < 4) {
+                message += "The email should be longer than 6 characters\n";
+            }
+        } else message += "Email field should not be empty\n";
+
+
+        if (firstName == null)
+            message += "First Name field should not be empty\n";
+
+        if (lastName == null)
+            message += "Last Name field should not be empty\n";
+
+        if (phoneNumber != null) {
+            if (phoneNumber.length < 10)
+                message += "The Phone Number should have at least 10 digits\n";
+        } else {
+            message += "Phone Number field should not be empty\n";
+        }
+
         let user = {
             "username": username,
             "password": password,
@@ -30,15 +64,19 @@ const RegisterPage = () => {
             ]
         };
 
-        await Register(JSON.stringify(user))
-            .then((result) => {
-                console.log(result);
-                //navigate('/home');
-            })
-            .catch(error => {
-                if (error.response.status === 403)
-                    console.log("Forbidden");
-            });
+        if (message === '') {
+            await Register(JSON.stringify(user))
+                .then((result) => {
+                    console.log(result);
+                    //navigate('/home');
+                })
+                .catch(error => {
+                    if (error.response.status === 403)
+                        console.log("Forbidden");
+                });
+        }
+        else
+            alert(message);
     }
 
     return (

@@ -11,16 +11,32 @@ const WithdrawPage = () => {
     const handleSubmit = async e => {
         e.preventDefault();
 
-        Transaction('withdraw', address, ammount)
-            .then((result) => {
-                console.log(result.data.response);
+        let message = '';
 
-            })
-            .catch(error => {
-                if (error.response.status === 403)
-                    console.log("Forbidden");
+        if (address != null) {
+            if (address.length != 42) {
+                message += "Address should be 42 characters\n";
             }
-            );
+        } else message += "Address field should not be empty\n";
+
+        if (ammount != null) {
+            if (isNaN(ammount))
+                message += "Ammount must be a number";
+        } else {
+            message += "Ammount field should not be empty";
+        }
+
+        if (message === '') {
+            Transaction('withdraw', address, ammount)
+                .then((result) => {
+                    console.log(result.data.response);
+
+                })
+                .catch(error => {
+                    if (error.response.status === 403)
+                        console.log("Forbidden");
+                });
+        } else alert(message);
     }
 
     return (
