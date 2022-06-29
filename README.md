@@ -7,9 +7,9 @@
 $ npm run start
 ```
 
-Run dev server on [http://localhost:8081/#/login](http://localhost:8081/#/login)
+Run dev server on [http://localhost:8081](http://localhost:8081)
 ### 
-Running on [https://danyelss.github.io/License-SPA-React/#/login](https://danyelss.github.io/License-SPA-React/#/login)
+Repository [https://github.com/Danyelss/license-spa-bank-react](https://github.com/Danyelss/license-spa-bank-react)
 
 ### Build
 
