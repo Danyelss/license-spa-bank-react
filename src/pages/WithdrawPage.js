@@ -29,7 +29,7 @@ const WithdrawPage = () => {
         if (message === '') {
             Transaction('withdraw', address, ammount)
                 .then((result) => {
-                    console.log(result.data.response);
+                    alert(result.data.response);
 
                 })
                 .catch(error => {
